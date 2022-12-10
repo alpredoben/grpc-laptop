@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package gocpu;
+
+option go_package = "gocpu/pb";
+
+import "memory_msg.proto";
+
+
+
+message Storage {
+  enum Driver {
+    UNKNOWN = 0;
+    HDD = 1;
+    SDD = 2;
+  }
+  
+  Driver driver = 1;
+  Memory memory = 2;
+}

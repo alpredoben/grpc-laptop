@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package gocpu;
+
+option go_package = "gocpu/pb";
+
+message Keyboard {
+  enum Layout {
+    UNKNOWN = 0;
+    QUERTY = 1;
+    QWERTZ = 2;
+    AZERTY = 3;
+  }
+  
+  Layout layout = 1;
+  bool backlit = 2;
+}

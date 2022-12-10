@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package gocpu;
+
+option go_package = "gocpu/pb";
+
+import "laptop_msg.proto";
+
+service LaptopServices  {
+  rpc CreateLaptop (CreateLaptopRequest) returns (CreateLaptopResponse);  
+}
+
+message CreateLaptopRequest {
+  Laptop laptop = 1;
+}
+
+message CreateLaptopResponse {
+  string id = 1;
+}
+
